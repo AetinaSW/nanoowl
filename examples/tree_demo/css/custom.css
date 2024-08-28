@@ -1,0 +1,148 @@
+
+.image-crisp{
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+#main_container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* prompt */
+#camera-container {
+  width: 1200px;
+  max-width: 1200px;
+  height: 675px;
+  display: flex;
+  justify-content: center;
+}
+#camera_image {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#prompt_input {
+  width: 100%;
+  height: 60px;
+  font-size: 30px;
+  padding: 8px 12px;
+  letter-spacing: 1px;
+}
+
+/* styling */
+#aetina-logo{
+  height: 100px;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  pointer-events: none;
+}
+#aetina-bg{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+}
+#aetina-slogan{
+  height: 32px;
+  position: absolute;
+  bottom: 10px;
+  right: 16px;
+  pointer-events: none;
+}
+#content-title{
+  font-family: 'Jost-bold';
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
+}
+#setup-prompt{
+  color:#181818;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+  font-size: 32px;
+}
+#setup-promptType{
+  color:#181818;
+  position: absolute;
+  bottom: 50px;
+  right: 16px;
+  cursor: pointer;
+  font-size: 32px;
+}
+#setup-prompt svg, #setup-promptType svg{
+  fill: #fff;
+  transition: .2s;
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+#setup-prompt svg:active, #setup-promptType svg:active{
+  transform: translateY(2px);
+}
+#setup-prompt svg:hover, #setup-promptType svg:hover{
+  fill: #a1c21e;
+}
+#setup-prompt:hover:after, #setup-promptType:hover:after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -35px;
+  right: -25%;
+  z-index: 100;
+  transform: translateX(0%);
+  margin: 0 auto;
+  color: rgba(255,255,255,0.8);
+  font-size: 14px;
+  font-weight: bolder;
+  white-space: nowrap;
+  background-color: #0c0c0c;
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 2px 10px;
+}
+.prompt-button.active{
+  background-color: #758d2d;
+  opacity: 1;
+}
+.prompt-button img{
+  opacity: .5;
+}
+.prompt-button.active img{
+  opacity: 1;
+}
+/* .prompt-button img{
+  filter: brightness(100%) invert(100%)
+} */
+
+.prompt-button:hover {
+  opacity: .8;
+}
+/* commit this block to disable tooltip due to the bug of the noise */
+/* .prompt-button:hover:after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  z-index: 100;
+  transform: translate(-50%);
+  margin: 0 auto;
+  color: rgba(255,255,255,0.8);
+  font-size: 14px;
+  font-weight: bolder;
+  white-space: nowrap;
+  background-color: #0c0c0c;
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 2px 10px;
+} */

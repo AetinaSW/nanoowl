@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Jost';
+  src: URL('../fonts/static/Jost-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Jost-bold';
+  src: URL('../fonts/static/Jost-SemiBold.ttf') format('truetype');
+}
+body {
+  font-family: 'Jost';
+  background-color: #323c41;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url('../images/bg.svg');
+  background-repeat: no-repeat;
+  background-size: 70vh;
+  background-position: right bottom;
+}
+.highlight{
+  position: relative;
+}
+.highlight:before{
+  content: "";
+  z-index: -1;
+  position: absolute;
+  height: 0.7em;
+  top: 0.6em;
+  background: red;
+  width: 100%;
+
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=55)";
+
+  /* IE 5-7 */
+  filter: alpha(opacity=55);
+
+  /* Netscape */
+  -moz-opacity: 0.55;
+
+  /* Safari 1.x */
+  -khtml-opacity: 0.55;
+
+  /* Good browsers */
+  opacity: 0.55;
+}
