@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  aetinasw-demokit-genai-ui:
+    image: aetinasw/demokit-genai-ui:${VERSION}
+    container_name: demokit-genai-ui
+    platform: linux/arm64
+    ports:
+      - "${DOCKER_PORT}:7861"
+    volumes:
+      - demokit-genai-ui-settings:/usr/share/nginx/html/js
+      - demokit-genai-ui-images:/usr/share/nginx/html/images
+    network_mode: host
+    restart: always
+
+volumes:
+  demokit-genai-ui-settings:
+    name: demokit-genai-ui-settings
+  demokit-genai-ui-images:
+    name: demokit-genai-ui-images

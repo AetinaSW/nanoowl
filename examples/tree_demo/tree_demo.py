@@ -192,6 +192,7 @@ if __name__ == "__main__":
     app['websockets'] = weakref.WeakSet()
     app.router.add_get("/", handle_index_get)
     app.router.add_route("GET", "/ws", websocket_handler)
+
     app.on_shutdown.append(on_shutdown)
     app.cleanup_ctx.append(run_detection_loop)
     web.run_app(app, host=args.host, port=args.port)

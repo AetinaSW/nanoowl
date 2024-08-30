@@ -1,0 +1,7 @@
+version: '3.8'
+
+volumes:
+  demokit-genai-ui-settings:
+    name: demokit-genai-ui-settings
+  demokit-genai-ui-images:
+    name: demokit-genai-ui-images
