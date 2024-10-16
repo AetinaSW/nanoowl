@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=nanoowl
+Exec=/home/nvidia/nanoowl_aetina/start_service.sh
+Icon=/home/nvidia/nanoowl_aetina/fav_icon.png
+Terminal=true
